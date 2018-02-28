@@ -13,7 +13,7 @@ public class Mayusculas {
     	public void MAYUSCULIZADOR(){      
       
     	// La primera letra sera masyucul	
-    	String FRASE = getSentence();
+    	String FRASE = UsarFrase();
         StringBuilder SALIDA = new StringBuilder(FRASE.length());  
         boolean Mayusculizador = true;
 
@@ -41,7 +41,7 @@ public class Mayusculas {
         System.out.println(SALIDA);
     }
 
-    public static String getSentence(){
+    public static String UsarFrase(){
         Scanner Auxiliar = new Scanner(System.in);
         String AUX;
         System.out.print("Introduce la frase :");
