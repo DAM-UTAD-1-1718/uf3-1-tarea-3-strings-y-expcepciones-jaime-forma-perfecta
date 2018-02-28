@@ -1,0 +1,51 @@
+
+
+import java.util.Scanner;
+
+public class Mayusculas {
+    
+
+    	private String FRASE;
+    	private boolean Mayusculizador = true;
+    
+    	
+    	
+    	public void MAYUSCULIZADOR(){      
+      
+    	// La primera letra sera masyucul	
+    	String FRASE = getSentence();
+        StringBuilder SALIDA = new StringBuilder(FRASE.length());  
+        boolean Mayusculizador = true;
+
+        //Bucle for para pasar por todos los caracteres del String
+        for(int i = 0; i < FRASE.length(); i++) {
+            //Obtiene el caracter que se esta evaluando
+            char CLAVE = FRASE.charAt(i);
+
+            //Si es un punto, pues la siguiente letra pues la pasar a mayusculas
+            if(CLAVE == '.') {
+                Mayusculizador = true;
+            }
+            // Pero en el caso de que sea una letra 
+            else if(Mayusculizador && Character.isAlphabetic(CLAVE)) {
+                // Lo convertimos en mayusculas
+                CLAVE = Character.toUpperCase(CLAVE);
+             
+                Mayusculizador = false;
+                // Esta parte sirve par que no se pasen a mayusculas las siguientes letras
+            }
+
+            // Se acumulan los resultados en salida
+            SALIDA.append(CLAVE);
+        }
+        System.out.println(SALIDA);
+    }
+
+    public static String getSentence(){
+        Scanner Auxiliar = new Scanner(System.in);
+        String AUX;
+        System.out.print("Introduce la frase :");
+        AUX = Auxiliar.nextLine();
+        return AUX;
+    }
+}
