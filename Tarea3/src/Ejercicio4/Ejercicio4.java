@@ -36,7 +36,7 @@ public class Ejercicio4 {
 		}
 
 		
-		System.out.println("La respuesta es: " + respuesta);
+		System.out.println("La respuesta es:" + respuesta);
 
 	}
 }
