@@ -1,5 +1,7 @@
 package Ejercicio1;
-
+/**
+*@autor Guillermo Crespo
+*/
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -28,12 +30,12 @@ static int i=0;
 	private static boolean buscarnumero(String nif) {
 		  Stack<Character> digits = new Stack<Character>();
 		// TODO Apéndice de método generado automáticamente
-		 boolean flag = false;
+		 boolean esnumero = false;
 		    char[] array = nif.toCharArray();
 		    for (char caracter : array){
 		        if ( Character.isDigit(caracter) )
-		        	flag = true;
-		        if(flag==true) {
+		        	esnumero = true;
+		        if(esnumero==true) {
 		        	digits.add(caracter);
 		        	auxnum=digits.get(i);
 		        	aux2=auxnum;
@@ -44,7 +46,7 @@ static int i=0;
 		        i++;
 		    }   
 		 
-		    return flag;
+		    return esnumero;
 	}
 
 	public static boolean isNumeric(String nif) {
